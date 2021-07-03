@@ -6,6 +6,8 @@
 
 package org.whispersystems.libsignal.ecc;
 
+import org.whispersystems.libsignal.util.ByteUtil;
+
 public class DjbECPrivateKey implements ECPrivateKey {
 
   private final byte[] privateKey;
@@ -15,8 +17,9 @@ public class DjbECPrivateKey implements ECPrivateKey {
   }
 
   @Override
-  public byte[] serialize() {
-    return privateKey;
+  public byte[] serialize(){
+    byte[] type = {Curve.DJB_TYPE};
+    return ByteUtil.combine(type, privateKey);
   }
 
   @Override

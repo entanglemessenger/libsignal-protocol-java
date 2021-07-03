@@ -1,5 +1,13 @@
+allprojects {
+    repositories {
+        // The order in which you list these repositories matter.
+        google()
+        jcenter()
+    }
+}
+
 subprojects {
-    ext.version_number     = "2.6.2"
+    ext.version_number     = "2000.6.2"
     ext.group_info         = "org.whispersystems"
     ext.curve25519_version = "0.4.1"
 

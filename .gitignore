@@ -1,7 +1,13 @@
-build
+build/
+bin/
+cache/
 /obj
 *.iml
 .gradle
 .idea
 gradle.properties
 local.properties
+.DS_Store
+.classpath
+.settings/
+.project

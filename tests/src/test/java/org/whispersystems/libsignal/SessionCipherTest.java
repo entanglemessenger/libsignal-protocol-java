@@ -15,6 +15,8 @@ import org.whispersystems.libsignal.state.SessionRecord;
 import org.whispersystems.libsignal.state.SessionState;
 import org.whispersystems.libsignal.util.guava.Optional;
 
+import java.io.IOException;
+
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,6 +25,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
+//import android.util.Log;
+//import java.nio.file.Files;
+//import java.io.File;
 
 public class SessionCipherTest extends TestCase {
 
@@ -179,5 +184,4 @@ public class SessionCipherTest extends TestCase {
     RatchetingSession.initializeSession(aliceSessionState, aliceParameters);
     RatchetingSession.initializeSession(bobSessionState, bobParameters);
   }
-
 }

@@ -156,7 +156,7 @@ public class Curve25519Test extends TestCase {
 
     try {
       byte[] badKeyType = new byte[33];
-      System.arraycopy(serializedPublic, 0, badKeyType, 0, serializedPublic.length);
+      System.arraycopy(serializedPublic, 0, badKeyType, 0, badKeyType.length);
       badKeyType[0] = 0x01;
       Curve.decodePoint(badKeyType, 0);
       throw new AssertionError("Should be bad key type");
